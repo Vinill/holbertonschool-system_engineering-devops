@@ -2,5 +2,5 @@
 #Web servers are the piece of software generating and serving HTML pages, let’s install one!
 sudo apt-get update
 sudo apt-get -y install nginx
-echo "Holberton School"
+echo "Hello World"
 sudo service nginx start
