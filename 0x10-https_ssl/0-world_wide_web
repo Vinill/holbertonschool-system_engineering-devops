@@ -9,5 +9,5 @@ fi
 for sub in $sub_domains
 do
 	echo -n "The subdomain $sub"
-	dig "$sub.$1" | awk 'NR == 14 {printf " is a %s record and points to %s\n", $4, $5}'
+	dig "$sub.$1" | awk 'FNR == 2 {printf " is a %s record and points to %s\n", $4, $5}'
 done
