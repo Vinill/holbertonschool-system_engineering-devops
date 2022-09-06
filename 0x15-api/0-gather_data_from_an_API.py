@@ -20,7 +20,8 @@ if __name__ == "__main__":
         if task["completed"] is True:
             res.append(task.get("title"))
             count += 1
-    print("Employee {} is done with tasks({}/{}):".format(get__name, count, get__len__val))
+    print("Employee {} is done with tasks({}/{}):"
+          .format(get__name, count, get__len__val))
 
     for title in res:
         print("\t {}".format(title))
