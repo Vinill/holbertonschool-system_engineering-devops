@@ -17,9 +17,13 @@ if __name__ == "__main__":
                        .format(arg))
 
     get__val = var.json()
-    with open('{}.csv'.format(argv), 'w') as f:
-        writer__file = csv.writer(f, quoting=csv.QUOTE_ALL)
+    list_user = []
+    dict_user = {arg: list_user}
 
-        for task in get__val:
-            writer__file.writerow([argv[1], get__name, task.get('completed'),
-                                  task.get('title')])
+    for task in get__val:
+        list_user.append({"task": task.get('title'),
+                          "completed": task.get('completed'),
+                          "username": get__name})
+
+    with open(arg + '.json', 'w', encoding='utf-8') as f:
+        json.dump(dict_user, f)
