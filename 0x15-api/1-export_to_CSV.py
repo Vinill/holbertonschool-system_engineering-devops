@@ -17,9 +17,9 @@ if __name__ == "__main__":
                        .format(arg))
 
     get__val = var.json()
-    with open('{}.csv'.format(argv), 'w') as f:
+    with open(arg + '.csv', 'w') as f:
         writer__file = csv.writer(f, quoting=csv.QUOTE_ALL)
 
         for task in get__val:
-            writer__file.writerow([argv[1], get__name, task.get('completed'),
+            writer__file.writerow([arg, get__name, task.get('completed'),
                                   task.get('title')])
