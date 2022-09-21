@@ -3,4 +3,4 @@
 chmod 777 /etc/nginx/nginx.conf
 sudo sed -i "s/80/8080/g" /etc/nginx/sites-enabled/default
 sudo sed -i "s/#user www-data;/user nginx;/" /etc/nginx/nginx.conf
-su nginx -c "service nginx restart"
+su nginx -c "service n
