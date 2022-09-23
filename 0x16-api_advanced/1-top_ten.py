@@ -3,6 +3,10 @@ import requests
 
 
 def top_ten(subreddit):
+    """
+    Write a function that queries the Reddit API and
+    prints the titles of the first 10 hot posts listed for a given subreddit
+    """
     subred = 'https://www.reddit.com/r/{}/hot.json?limit=10'.format(subreddit)
     red_req = requests.get(subred, headers={'User-Agent': 'hola'})
     if (red_req.status_code == requests.codes.ok):
