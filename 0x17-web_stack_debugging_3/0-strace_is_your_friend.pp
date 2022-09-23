@@ -1,4 +1,5 @@
-# Close requests
-exec { 'restart nginx':
-  command   => "/bin/sed -i 's|-n 15|-n 4096|g' /etc/default/nginx ; /etc/init.d/nginx restart"
+# change a error in php
+exec { 'replace a line':
+  command => "sed -i 's/.phpp/.php/g' /var/www/html/wp-settings.php",
+  path    => ['/usr/bin', '/usr/sbin', '/bin'],
 }
